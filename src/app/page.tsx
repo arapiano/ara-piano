@@ -6,7 +6,6 @@ const NAV_ITEMS = [
   { label: "About", href: "#about" },
   { label: "Store", href: "#store" },
   { label: "YouTube", href: "#youtube" },
-  { label: "Music", href: "#music" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -195,11 +194,41 @@ export default function Home() {
           </div>
 
           {/* Goods */}
-          <div>
+          <div className="mb-12">
             <h3 className="text-lg font-semibold mb-6">グッズ</h3>
-            <div className="p-6 bg-white rounded-2xl">
-              <p className="text-sm text-[#6e6e73]">グッズ販売は準備中です。もうしばらくお待ちください。</p>
-            </div>
+            <a
+              href="https://suzuri.jp/ARAPIANO"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between p-5 bg-white rounded-2xl hover:shadow-sm transition-shadow"
+            >
+              <div>
+                <p className="font-medium">SUZURI</p>
+                <p className="text-sm text-[#6e6e73] mt-1">ARA PIANOオリジナルグッズを販売しています。</p>
+              </div>
+              <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          {/* BGM */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">BGM</h3>
+            <a
+              href="https://audiostock.jp/artists/11994"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between p-5 bg-white rounded-2xl hover:shadow-sm transition-shadow"
+            >
+              <div>
+                <p className="font-medium">Audiostock</p>
+                <p className="text-sm text-[#6e6e73] mt-1">BGM・効果音など、商用利用可能な音楽素材を提供しています。</p>
+              </div>
+              <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -237,31 +266,6 @@ export default function Home() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
             </svg>
           </a>
-        </div>
-      </section>
-
-      {/* Music */}
-      <section id="music" className="py-32 px-6 bg-[#f5f5f7]">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">Music</p>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">音楽作品</h2>
-
-          <div className="grid grid-cols-1 gap-4">
-            <a
-              href="https://audiostock.jp/artists/11994"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between p-6 bg-white rounded-2xl hover:shadow-sm transition-shadow"
-            >
-              <div>
-                <h3 className="font-medium mb-1">Audiostock</h3>
-                <p className="text-sm text-[#6e6e73]">BGM・効果音など、商用利用可能な音楽素材を提供しています。</p>
-              </div>
-              <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
         </div>
       </section>
 
