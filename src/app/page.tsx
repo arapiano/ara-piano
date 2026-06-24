@@ -258,11 +258,12 @@ export default function Home() {
             お仕事のご依頼やご質問はこちらからお気軽にどうぞ。
           </p>
 
-          <form className="space-y-6 mb-16">
+          <form action="https://formspree.io/f/xykqkgbq" method="POST" className="space-y-6 mb-16">
             <div>
               <label className="block text-sm font-medium mb-2">お名前</label>
               <input
                 type="text"
+                name="name"
                 placeholder="山田 太郎"
                 className="w-full px-4 py-3 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-black/30 transition-colors bg-white"
               />
@@ -271,6 +272,7 @@ export default function Home() {
               <label className="block text-sm font-medium mb-2">メールアドレス</label>
               <input
                 type="email"
+                name="email"
                 placeholder="example@email.com"
                 className="w-full px-4 py-3 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-black/30 transition-colors bg-white"
               />
@@ -279,6 +281,7 @@ export default function Home() {
               <label className="block text-sm font-medium mb-2">メッセージ</label>
               <textarea
                 rows={5}
+                name="message"
                 placeholder="メッセージをご記入ください"
                 className="w-full px-4 py-3 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-black/30 transition-colors bg-white resize-none"
               />
