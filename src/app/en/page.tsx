@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   { label: "Contact", href: "#contact" },
 ];
 
-export default function Home() {
+export default function HomeEn() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -21,7 +21,6 @@ export default function Home() {
             ARA PIANO
           </a>
 
-          {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
             {NAV_ITEMS.map((item) => (
               <a
@@ -32,14 +31,15 @@ export default function Home() {
                 {item.label}
               </a>
             ))}
-            <a href="/en" className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">EN</a>
+            <a href="/" className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">
+              日本語
+            </a>
           </div>
 
-          {/* Mobile hamburger */}
           <button
             className="md:hidden flex flex-col gap-1.5 p-2"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="メニュー"
+            aria-label="Menu"
           >
             <span className={`block w-5 h-px bg-[#1d1d1f] transition-all duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
             <span className={`block w-5 h-px bg-[#1d1d1f] transition-all duration-200 ${menuOpen ? "opacity-0" : ""}`} />
@@ -47,7 +47,6 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Mobile menu */}
         {menuOpen && (
           <div className="md:hidden bg-white border-t border-black/5 px-6 py-4 flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
@@ -60,6 +59,7 @@ export default function Home() {
                 {item.label}
               </a>
             ))}
+            <a href="/" className="text-sm text-[#6e6e73]">日本語</a>
           </div>
         )}
       </nav>
@@ -79,7 +79,7 @@ export default function Home() {
             ARA PIANO
           </h1>
           <p className="text-xl md:text-2xl text-white/70 font-light mb-12">
-            ピアノ演奏を日常に。
+            Bringing piano into everyday life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -97,7 +97,7 @@ export default function Home() {
               href="#store"
               className="inline-flex items-center justify-center px-8 py-3 border border-white/40 text-white text-sm font-medium rounded-full hover:bg-white/10 transition-colors"
             >
-              ストアを見る
+              Sheet Music
             </a>
           </div>
         </div>
@@ -113,27 +113,26 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">About</p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
-            作曲家・ピアニスト
+            Composer &amp; Pianist
           </h2>
           <div className="space-y-4 text-[#6e6e73] leading-relaxed mb-6">
-            <p className="text-lg font-medium text-[#1d1d1f]">新本 和正（Kazumasa Aramoto）</p>
-            <p className="text-sm text-[#6e6e73]">作曲家・ピアノYouTuber・株式会社ARA PIANO代表</p>
+            <p className="text-lg font-medium text-[#1d1d1f]">Kazumasa Aramoto</p>
+            <p className="text-sm text-[#6e6e73]">Composer · Piano YouTuber · CEO of ARA PIANO Inc.</p>
           </div>
           <div className="space-y-5 text-[#6e6e73] leading-relaxed mb-16">
             <p>
-              「ピアノ演奏を日常に」をコンセプトに活動する作曲家・ピアノYouTuber。Audiostock提携クリエイターとして1,000曲以上の楽曲をリリースし、テレビ番組や映像作品などへ楽曲提供を行う。YouTubeチャンネル「ARA PIANO」の登録者数は15万人を超え、ピアノアレンジ楽譜の累計販売数は1万点を超える。
+              A composer and piano YouTuber based in Japan, dedicated to the concept of "Life with Piano." As an Audiostock partner creator, he has released over 1,000 original tracks, with music featured in TV programs and video productions. His YouTube channel "ARA PIANO" has grown to over 150,000 subscribers, and his piano arrangement sheet music has sold over 10,000 copies.
             </p>
             <p>
-              2025年にはAudiostock CREATORS AWARD「BEST CREATOR賞」を受賞。現在は株式会社ARA PIANO代表として、作曲・編曲・音楽教育を通じて、より多くの人が音楽を楽しめる環境づくりに取り組んでいる。
+              In 2025, he received the Audiostock CREATORS AWARD "Best Creator" prize. As CEO of ARA PIANO Inc., he continues to pursue composition, arrangement, and music education — creating an environment where more people can enjoy music in their everyday lives.
             </p>
           </div>
 
-          {/* Achievements */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { number: "15万+", label: "YouTube登録者" },
-              { number: "1万+", label: "楽譜販売累計" },
-              { number: "受賞", label: "Audiostock BEST CREATOR Award" },
+              { number: "150K+", label: "YouTube Subscribers" },
+              { number: "10,000+", label: "Sheet Music Sold" },
+              { number: "Award", label: "Audiostock Best Creator 2025" },
             ].map((item) => (
               <div key={item.label} className="text-center py-8 border-t border-black/10">
                 <p className="text-3xl font-semibold tracking-tight mb-2">{item.number}</p>
@@ -148,17 +147,16 @@ export default function Home() {
       <section id="store" className="py-32 px-6 bg-[#f5f5f7]">
         <div className="max-w-3xl mx-auto">
           <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">Store</p>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">ストア</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">Store</h2>
 
           {/* Sheet Music */}
           <div className="mb-12">
-            <h3 className="text-lg font-semibold mb-6">楽譜</h3>
+            <h3 className="text-lg font-semibold mb-6">Sheet Music</h3>
             <div className="space-y-3">
-              <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-3">国内販売</p>
+              <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-3">International</p>
               {[
-                { name: "Piascore", href: "https://store.piascore.com/publishers/7845" },
-                { name: "kokomu", href: "https://www.kokomu.jp/artist/ARAPIANO" },
-                { name: "mucome", href: "https://mucome.net/profile?id=1931" },
+                { name: "mymusic5", href: "https://www.mymusic5.com/ja/ARAPIANO" },
+                { name: "Mapianist", href: "https://www.mapianist.com/profile/1058756/sheet/post" },
               ].map((item) => (
                 <a
                   key={item.name}
@@ -173,10 +171,11 @@ export default function Home() {
                   </svg>
                 </a>
               ))}
-              <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-3 pt-4">海外販売</p>
+              <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-3 pt-4">Japan</p>
               {[
-                { name: "mymusic5", href: "https://www.mymusic5.com/ja/ARAPIANO" },
-                { name: "Mapianist", href: "https://www.mapianist.com/profile/1058756/sheet/post" },
+                { name: "Piascore", href: "https://store.piascore.com/publishers/7845" },
+                { name: "kokomu", href: "https://www.kokomu.jp/artist/ARAPIANO" },
+                { name: "mucome", href: "https://mucome.net/profile?id=1931" },
               ].map((item) => (
                 <a
                   key={item.name}
@@ -196,7 +195,7 @@ export default function Home() {
 
           {/* Goods */}
           <div className="mb-12">
-            <h3 className="text-lg font-semibold mb-6">グッズ</h3>
+            <h3 className="text-lg font-semibold mb-6">Goods</h3>
             <a
               href="https://suzuri.jp/ARAPIANO"
               target="_blank"
@@ -205,7 +204,7 @@ export default function Home() {
             >
               <div>
                 <p className="font-medium">SUZURI</p>
-                <p className="text-sm text-[#6e6e73] mt-1">ARA PIANOオリジナルグッズを販売しています。</p>
+                <p className="text-sm text-[#6e6e73] mt-1">Official ARA PIANO merchandise.</p>
               </div>
               <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
@@ -215,7 +214,7 @@ export default function Home() {
 
           {/* BGM */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">BGM</h3>
+            <h3 className="text-lg font-semibold mb-6">BGM / Sound Effects</h3>
             <a
               href="https://audiostock.jp/artists/11994"
               target="_blank"
@@ -224,7 +223,7 @@ export default function Home() {
             >
               <div>
                 <p className="font-medium">Audiostock</p>
-                <p className="text-sm text-[#6e6e73] mt-1">BGM・効果音など、商用利用可能な音楽素材を提供しています。</p>
+                <p className="text-sm text-[#6e6e73] mt-1">Royalty-free music and sound effects for commercial use.</p>
               </div>
               <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
@@ -239,10 +238,10 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">YouTube</p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-            チャンネル紹介
+            YouTube Channel
           </h2>
           <p className="text-[#6e6e73] mb-12">
-            ピアノ演奏動画を中心に、楽曲解説や演奏テクニックなどを発信しています。
+            Piano performances, arrangement tutorials, and music for everyday life.
           </p>
 
           <div className="aspect-video rounded-2xl overflow-hidden mb-8">
@@ -262,7 +261,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity"
           >
-            チャンネルを見る
+            Visit Channel
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
             </svg>
@@ -271,39 +270,39 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-32 px-6">
+      <section id="contact" className="py-32 px-6 bg-[#f5f5f7]">
         <div className="max-w-3xl mx-auto">
           <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">Contact</p>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">お問い合わせ</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">Get in Touch</h2>
           <p className="text-[#6e6e73] mb-12">
-            お仕事のご依頼やご質問はこちらからお気軽にどうぞ。
+            For business inquiries, collaborations, or any questions, feel free to reach out.
           </p>
 
           <form action="https://formspree.io/f/xykqkgbq" method="POST" className="space-y-6 mb-16">
             <div>
-              <label className="block text-sm font-medium mb-2">お名前</label>
+              <label className="block text-sm font-medium mb-2">Name</label>
               <input
                 type="text"
                 name="name"
-                placeholder="山田 太郎"
+                placeholder="Your Name"
                 className="w-full px-4 py-3 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-black/30 transition-colors bg-white"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-2">メールアドレス</label>
+              <label className="block text-sm font-medium mb-2">Email</label>
               <input
                 type="email"
                 name="email"
-                placeholder="example@email.com"
+                placeholder="your@email.com"
                 className="w-full px-4 py-3 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-black/30 transition-colors bg-white"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-2">メッセージ</label>
+              <label className="block text-sm font-medium mb-2">Message</label>
               <textarea
                 rows={5}
                 name="message"
-                placeholder="メッセージをご記入ください"
+                placeholder="Your message..."
                 className="w-full px-4 py-3 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-black/30 transition-colors bg-white resize-none"
               />
             </div>
@@ -311,38 +310,16 @@ export default function Home() {
               type="submit"
               className="w-full sm:w-auto px-8 py-3 bg-[#1d1d1f] text-white text-sm font-medium rounded-full hover:bg-[#3d3d3f] transition-colors"
             >
-              送信する
+              Send Message
             </button>
           </form>
 
-          {/* SNS Links */}
           <div className="border-t border-black/10 pt-12">
-            <p className="text-sm text-[#6e6e73] mb-6">SNS</p>
+            <p className="text-sm text-[#6e6e73] mb-6">Follow</p>
             <div className="flex gap-6">
-              <a
-                href="https://www.youtube.com/@arapiano"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
-              >
-                YouTube
-              </a>
-              <a
-                href="https://x.com/aramotokazumasa"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
-              >
-                X
-              </a>
-              <a
-                href="https://www.instagram.com/arapiano_arachang/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
-              >
-                Instagram
-              </a>
+              <a href="https://www.youtube.com/@arapiano" target="_blank" rel="noopener noreferrer" className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">YouTube</a>
+              <a href="https://x.com/aramotokazumasa" target="_blank" rel="noopener noreferrer" className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">X</a>
+              <a href="https://www.instagram.com/arapiano_arachang/" target="_blank" rel="noopener noreferrer" className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">Instagram</a>
             </div>
           </div>
         </div>
