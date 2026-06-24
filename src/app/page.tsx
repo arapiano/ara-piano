@@ -1,65 +1,346 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
+
+const NAV_ITEMS = [
+  { label: "About", href: "#about" },
+  { label: "Sheet Music", href: "#sheet-music" },
+  { label: "YouTube", href: "#youtube" },
+  { label: "Music", href: "#music" },
+  { label: "Contact", href: "#contact" },
+];
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <div className="min-h-screen bg-white text-[#1d1d1f]">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
+        <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
+          <a href="#" className="text-sm font-semibold tracking-wide">
+            ARA PIANO
+          </a>
+
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center gap-8">
+            {NAV_ITEMS.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden flex flex-col gap-1.5 p-2"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="メニュー"
+          >
+            <span className={`block w-5 h-px bg-[#1d1d1f] transition-all duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`block w-5 h-px bg-[#1d1d1f] transition-all duration-200 ${menuOpen ? "opacity-0" : ""}`} />
+            <span className={`block w-5 h-px bg-[#1d1d1f] transition-all duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          </button>
+        </div>
+
+        {/* Mobile menu */}
+        {menuOpen && (
+          <div className="md:hidden bg-white border-t border-black/5 px-6 py-4 flex flex-col gap-4">
+            {NAV_ITEMS.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm text-[#1d1d1f]"
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        )}
+      </nav>
+
+      {/* Hero */}
+      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-14">
+        <p className="text-sm tracking-[0.2em] uppercase text-[#6e6e73] mb-6">
+          Life with Piano
+        </p>
+        <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-tight mb-6">
+          ARA PIANO
+        </h1>
+        <p className="text-xl md:text-2xl text-[#6e6e73] font-light mb-12">
+          ピアノ演奏を日常に。
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <a
+            href="https://www.youtube.com/@ara_piano"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#1d1d1f] text-white text-sm font-medium rounded-full hover:bg-[#3d3d3f] transition-colors"
+          >
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+            YouTube
+          </a>
+          <a
+            href="#sheet-music"
+            className="inline-flex items-center justify-center px-8 py-3 border border-[#1d1d1f]/20 text-sm font-medium rounded-full hover:bg-[#f5f5f7] transition-colors"
+          >
+            楽譜を見る
+          </a>
+        </div>
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+          <svg className="w-5 h-5 text-[#c7c7cc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-32 px-6">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">About</p>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
+            作曲家・ピアニスト
+          </h2>
+          <div className="prose prose-lg text-[#6e6e73] leading-relaxed space-y-6 mb-16">
+            <p>
+              ARA PIANOは、「ピアノ演奏を日常に」をテーマに活動する作曲家・ピアニストです。
+              初心者でも気軽にピアノを楽しめる世界を目指し、演奏動画・楽譜・オリジナル音楽を届けています。
+            </p>
+            <p>
+              {/* ここに自己紹介文を追加できます */}
+            </p>
+          </div>
+
+          {/* Achievements */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { number: "15万+", label: "YouTube登録者" },
+              { number: "1万+", label: "楽譜販売累計" },
+              { number: "受賞", label: "Audiostock BEST CREATOR Award" },
+            ].map((item) => (
+              <div key={item.label} className="text-center py-8 border-t border-black/10">
+                <p className="text-3xl font-semibold tracking-tight mb-2">{item.number}</p>
+                <p className="text-sm text-[#6e6e73]">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sheet Music */}
+      <section id="sheet-music" className="py-32 px-6 bg-[#f5f5f7]">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">Sheet Music</p>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">楽譜販売</h2>
+          <p className="text-[#6e6e73] mb-12">
+            初心者から上級者まで楽しめる楽譜を販売しています。
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between p-6 bg-white rounded-2xl hover:shadow-sm transition-shadow"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              <div>
+                <p className="text-xs text-[#6e6e73] mb-1">国内販売</p>
+                <p className="font-medium">楽譜販売サイト（国内）</p>
+                <p className="text-sm text-[#6e6e73] mt-1">※リンクを後から設定できます</p>
+              </div>
+              <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between p-6 bg-white rounded-2xl hover:shadow-sm transition-shadow"
             >
-              Learning
-            </a>{" "}
-            center.
+              <div>
+                <p className="text-xs text-[#6e6e73] mb-1">海外販売</p>
+                <p className="font-medium">Sheet Music (International)</p>
+                <p className="text-sm text-[#6e6e73] mt-1">※リンクを後から設定できます</p>
+              </div>
+              <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* YouTube */}
+      <section id="youtube" className="py-32 px-6">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">YouTube</p>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+            チャンネル紹介
+          </h2>
+          <p className="text-[#6e6e73] mb-12">
+            ピアノ演奏動画を中心に、楽曲解説や演奏テクニックなどを発信しています。
+          </p>
+
+          {/* YouTube embed placeholder */}
+          <div className="aspect-video bg-[#f5f5f7] rounded-2xl flex items-center justify-center mb-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <svg className="w-6 h-6 text-[#1d1d1f]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+              <p className="text-sm text-[#6e6e73]">動画IDを設定すると表示されます</p>
+            </div>
+          </div>
+
+          <a
+            href="https://www.youtube.com/@ara_piano"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity"
+          >
+            チャンネルを見る
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      {/* Music */}
+      <section id="music" className="py-32 px-6 bg-[#f5f5f7]">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">Music</p>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">音楽作品</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[
+              {
+                title: "オリジナル作品",
+                description: "オリジナル楽曲を公開しています。",
+                href: "#",
+              },
+              {
+                title: "Audiostock",
+                description: "BGM・効果音など、商用利用可能な音楽素材を提供しています。",
+                href: "#",
+              },
+              {
+                title: "配信作品",
+                description: "各種音楽配信サービスで楽曲を配信しています。",
+                href: "#",
+              },
+            ].map((item) => (
+              <a
+                key={item.title}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-6 bg-white rounded-2xl hover:shadow-sm transition-shadow"
+              >
+                <h3 className="font-medium mb-2">{item.title}</h3>
+                <p className="text-sm text-[#6e6e73] leading-relaxed">{item.description}</p>
+                <p className="text-xs text-[#6e6e73] mt-4 group-hover:opacity-70 transition-opacity">
+                  ※リンクを後から設定できます →
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="py-32 px-6">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">Contact</p>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">お問い合わせ</h2>
+          <p className="text-[#6e6e73] mb-12">
+            お仕事のご依頼やご質問はこちらからお気軽にどうぞ。
+          </p>
+
+          <form className="space-y-6 mb-16">
+            <div>
+              <label className="block text-sm font-medium mb-2">お名前</label>
+              <input
+                type="text"
+                placeholder="山田 太郎"
+                className="w-full px-4 py-3 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-black/30 transition-colors bg-white"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-2">メールアドレス</label>
+              <input
+                type="email"
+                placeholder="example@email.com"
+                className="w-full px-4 py-3 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-black/30 transition-colors bg-white"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-2">メッセージ</label>
+              <textarea
+                rows={5}
+                placeholder="メッセージをご記入ください"
+                className="w-full px-4 py-3 border border-black/10 rounded-xl text-sm focus:outline-none focus:border-black/30 transition-colors bg-white resize-none"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full sm:w-auto px-8 py-3 bg-[#1d1d1f] text-white text-sm font-medium rounded-full hover:bg-[#3d3d3f] transition-colors"
+            >
+              送信する
+            </button>
+          </form>
+
+          {/* SNS Links */}
+          <div className="border-t border-black/10 pt-12">
+            <p className="text-sm text-[#6e6e73] mb-6">SNS</p>
+            <div className="flex gap-6">
+              <a
+                href="https://www.youtube.com/@ara_piano"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
+              >
+                YouTube
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
+              >
+                Instagram
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
+              >
+                X (Twitter)
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-10 px-6 border-t border-black/5">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm font-semibold">ARA PIANO</p>
+          <p className="text-xs text-[#6e6e73]">
+            © {new Date().getFullYear()} ARA PIANO. All rights reserved.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </footer>
     </div>
   );
 }
