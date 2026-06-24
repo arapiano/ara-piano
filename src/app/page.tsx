@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const NAV_ITEMS = [
   { label: "About", href: "#about" },
-  { label: "Sheet Music", href: "#sheet-music" },
+  { label: "Store", href: "#store" },
   { label: "YouTube", href: "#youtube" },
   { label: "Music", href: "#music" },
   { label: "Contact", href: "#contact" },
@@ -94,10 +94,10 @@ export default function Home() {
               YouTube
             </a>
             <a
-              href="#sheet-music"
+              href="#store"
               className="inline-flex items-center justify-center px-8 py-3 border border-white/40 text-white text-sm font-medium rounded-full hover:bg-white/10 transition-colors"
             >
-              楽譜を見る
+              ストアを見る
             </a>
           </div>
         </div>
@@ -144,53 +144,62 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sheet Music */}
-      <section id="sheet-music" className="py-32 px-6 bg-[#f5f5f7]">
+      {/* Store */}
+      <section id="store" className="py-32 px-6 bg-[#f5f5f7]">
         <div className="max-w-3xl mx-auto">
-          <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">Sheet Music</p>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">楽譜販売</h2>
-          <p className="text-[#6e6e73] mb-12">
-            初心者から上級者まで楽しめる楽譜を販売しています。
-          </p>
+          <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">Store</p>
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">ストア</h2>
 
-          <div className="space-y-3">
-            <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-4">国内販売</p>
-            {[
-              { name: "Piascore", href: "https://store.piascore.com/publishers/7845" },
-              { name: "kokomu", href: "https://www.kokomu.jp/artist/ARAPIANO" },
-              { name: "mucome", href: "https://mucome.net/profile?id=1931" },
-            ].map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-between p-5 bg-white rounded-2xl hover:shadow-sm transition-shadow"
-              >
-                <p className="font-medium">{item.name}</p>
-                <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            ))}
-            <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-4 pt-6">海外販売</p>
-            {[
-              { name: "mymusic5", href: "https://www.mymusic5.com/ja/ARAPIANO" },
-              { name: "Mapianist", href: "https://www.mapianist.com/profile/1058756/sheet/post" },
-            ].map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-between p-5 bg-white rounded-2xl hover:shadow-sm transition-shadow"
-              >
-                <p className="font-medium">{item.name}</p>
-                <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            ))}
+          {/* Sheet Music */}
+          <div className="mb-12">
+            <h3 className="text-lg font-semibold mb-6">楽譜</h3>
+            <div className="space-y-3">
+              <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-3">国内販売</p>
+              {[
+                { name: "Piascore", href: "https://store.piascore.com/publishers/7845" },
+                { name: "kokomu", href: "https://www.kokomu.jp/artist/ARAPIANO" },
+                { name: "mucome", href: "https://mucome.net/profile?id=1931" },
+              ].map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between p-5 bg-white rounded-2xl hover:shadow-sm transition-shadow"
+                >
+                  <p className="font-medium">{item.name}</p>
+                  <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              ))}
+              <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-3 pt-4">海外販売</p>
+              {[
+                { name: "mymusic5", href: "https://www.mymusic5.com/ja/ARAPIANO" },
+                { name: "Mapianist", href: "https://www.mapianist.com/profile/1058756/sheet/post" },
+              ].map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between p-5 bg-white rounded-2xl hover:shadow-sm transition-shadow"
+                >
+                  <p className="font-medium">{item.name}</p>
+                  <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Goods */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">グッズ</h3>
+            <div className="p-6 bg-white rounded-2xl">
+              <p className="text-sm text-[#6e6e73]">グッズ販売は準備中です。もうしばらくお待ちください。</p>
+            </div>
           </div>
         </div>
       </section>
