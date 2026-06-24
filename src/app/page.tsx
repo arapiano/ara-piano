@@ -108,13 +108,16 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
             作曲家・ピアニスト
           </h2>
-          <div className="prose prose-lg text-[#6e6e73] leading-relaxed space-y-6 mb-16">
+          <div className="space-y-4 text-[#6e6e73] leading-relaxed mb-6">
+            <p className="text-lg font-medium text-[#1d1d1f]">新本 和正（Kazumasa Aramoto）</p>
+            <p className="text-sm text-[#6e6e73]">作曲家・ピアノYouTuber・株式会社ARA PIANO代表</p>
+          </div>
+          <div className="space-y-5 text-[#6e6e73] leading-relaxed mb-16">
             <p>
-              ARA PIANOは、「ピアノ演奏を日常に」をテーマに活動する作曲家・ピアニストです。
-              初心者でも気軽にピアノを楽しめる世界を目指し、演奏動画・楽譜・オリジナル音楽を届けています。
+              「ピアノ演奏を日常に」をコンセプトに活動する作曲家・ピアノYouTuber。Audiostock提携クリエイターとして1,000曲以上の楽曲をリリースし、テレビ番組や映像作品などへ楽曲提供を行う。YouTubeチャンネル「ARA PIANO」の登録者数は15万人を超え、ピアノアレンジ楽譜の累計販売数は1万点を超える。
             </p>
             <p>
-              {/* ここに自己紹介文を追加できます */}
+              2025年にはAudiostock CREATORS AWARD「BEST CREATOR賞」を受賞。現在は株式会社ARA PIANO代表として、作曲・編曲・音楽教育を通じて、より多くの人が音楽を楽しめる環境づくりに取り組んでいる。
             </p>
           </div>
 
@@ -292,14 +295,6 @@ export default function Home() {
           <div className="border-t border-black/10 pt-12">
             <p className="text-sm text-[#6e6e73] mb-6">SNS</p>
             <div className="flex gap-6">
-              <a
-                href="https://www.youtube.com/@arapiano"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
-              >
-                YouTube
-              </a>
               <a
                 href="https://www.youtube.com/@arapiano"
                 target="_blank"
