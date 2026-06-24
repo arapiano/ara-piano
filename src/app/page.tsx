@@ -77,7 +77,7 @@ export default function Home() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-            href="https://www.youtube.com/@ara_piano"
+            href="https://www.youtube.com/@arapiano"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#1d1d1f] text-white text-sm font-medium rounded-full hover:bg-[#3d3d3f] transition-colors"
@@ -143,37 +143,44 @@ export default function Home() {
             初心者から上級者まで楽しめる楽譜を販売しています。
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between p-6 bg-white rounded-2xl hover:shadow-sm transition-shadow"
-            >
-              <div>
-                <p className="text-xs text-[#6e6e73] mb-1">国内販売</p>
-                <p className="font-medium">楽譜販売サイト（国内）</p>
-                <p className="text-sm text-[#6e6e73] mt-1">※リンクを後から設定できます</p>
-              </div>
-              <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between p-6 bg-white rounded-2xl hover:shadow-sm transition-shadow"
-            >
-              <div>
-                <p className="text-xs text-[#6e6e73] mb-1">海外販売</p>
-                <p className="font-medium">Sheet Music (International)</p>
-                <p className="text-sm text-[#6e6e73] mt-1">※リンクを後から設定できます</p>
-              </div>
-              <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
+          <div className="space-y-3">
+            <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-4">国内販売</p>
+            {[
+              { name: "Piascore", href: "https://store.piascore.com/publishers/7845" },
+              { name: "kokomu", href: "https://www.kokomu.jp/artist/ARAPIANO" },
+              { name: "mucome", href: "https://mucome.net/profile?id=1931" },
+            ].map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between p-5 bg-white rounded-2xl hover:shadow-sm transition-shadow"
+              >
+                <p className="font-medium">{item.name}</p>
+                <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            ))}
+            <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-4 pt-6">海外販売</p>
+            {[
+              { name: "mymusic5", href: "https://www.mymusic5.com/ja/ARAPIANO" },
+              { name: "Mapianist", href: "https://www.mapianist.com/profile/1058756/sheet/post" },
+            ].map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between p-5 bg-white rounded-2xl hover:shadow-sm transition-shadow"
+              >
+                <p className="font-medium">{item.name}</p>
+                <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -202,7 +209,7 @@ export default function Home() {
           </div>
 
           <a
-            href="https://www.youtube.com/@ara_piano"
+            href="https://www.youtube.com/@arapiano"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity"
@@ -231,7 +238,7 @@ export default function Home() {
               {
                 title: "Audiostock",
                 description: "BGM・効果音など、商用利用可能な音楽素材を提供しています。",
-                href: "#",
+                href: "https://audiostock.jp/artists/11994",
               },
               {
                 title: "配信作品",
@@ -304,7 +311,7 @@ export default function Home() {
             <p className="text-sm text-[#6e6e73] mb-6">SNS</p>
             <div className="flex gap-6">
               <a
-                href="https://www.youtube.com/@ara_piano"
+                href="https://www.youtube.com/@arapiano"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
@@ -312,20 +319,12 @@ export default function Home() {
                 YouTube
               </a>
               <a
-                href="#"
+                href="https://audiostock.jp/artists/11994"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
               >
-                Instagram
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
-              >
-                X (Twitter)
+                Audiostock
               </a>
             </div>
           </div>
