@@ -65,37 +65,44 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-14">
-        <p className="text-sm tracking-[0.2em] uppercase text-[#6e6e73] mb-6">
-          Life with Piano
-        </p>
-        <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-tight mb-6">
-          ARA PIANO
-        </h1>
-        <p className="text-xl md:text-2xl text-[#6e6e73] font-light mb-12">
-          ピアノ演奏を日常に。
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <a
-            href="https://www.youtube.com/@arapiano"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#1d1d1f] text-white text-sm font-medium rounded-full hover:bg-[#3d3d3f] transition-colors"
-          >
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-            </svg>
-            YouTube
-          </a>
-          <a
-            href="#sheet-music"
-            className="inline-flex items-center justify-center px-8 py-3 border border-[#1d1d1f]/20 text-sm font-medium rounded-full hover:bg-[#f5f5f7] transition-colors"
-          >
-            楽譜を見る
-          </a>
+      <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-14 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/hero.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10">
+          <p className="text-sm tracking-[0.2em] uppercase text-white/70 mb-6">
+            Life with Piano
+          </p>
+          <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-tight mb-6 text-white">
+            ARA PIANO
+          </h1>
+          <p className="text-xl md:text-2xl text-white/70 font-light mb-12">
+            ピアノ演奏を日常に。
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://www.youtube.com/@arapiano"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-[#1d1d1f] text-sm font-medium rounded-full hover:bg-white/90 transition-colors"
+            >
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+              YouTube
+            </a>
+            <a
+              href="#sheet-music"
+              className="inline-flex items-center justify-center px-8 py-3 border border-white/40 text-white text-sm font-medium rounded-full hover:bg-white/10 transition-colors"
+            >
+              楽譜を見る
+            </a>
+          </div>
         </div>
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg className="w-5 h-5 text-[#c7c7cc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
           </svg>
         </div>
