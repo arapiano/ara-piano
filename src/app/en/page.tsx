@@ -216,7 +216,7 @@ export default function HomeEn() {
           <div>
             <h3 className="text-lg font-semibold mb-6">BGM / Sound Effects</h3>
             <a
-              href="https://audiostock.jp/artists/11994"
+              href="https://audiostock.net/artists/933"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-between p-5 bg-white rounded-2xl hover:shadow-sm transition-shadow"
