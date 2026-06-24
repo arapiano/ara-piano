@@ -196,16 +196,15 @@ export default function Home() {
             ピアノ演奏動画を中心に、楽曲解説や演奏テクニックなどを発信しています。
           </p>
 
-          {/* YouTube embed placeholder */}
-          <div className="aspect-video bg-[#f5f5f7] rounded-2xl flex items-center justify-center mb-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
-                <svg className="w-6 h-6 text-[#1d1d1f]" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-              <p className="text-sm text-[#6e6e73]">動画IDを設定すると表示されます</p>
-            </div>
+          <div className="aspect-video rounded-2xl overflow-hidden mb-8">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/uhwJuXJvOyo"
+              title="ARA PIANO"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
 
           <a
@@ -228,38 +227,21 @@ export default function Home() {
           <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">Music</p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">音楽作品</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[
-              {
-                title: "オリジナル作品",
-                description: "オリジナル楽曲を公開しています。",
-                href: "#",
-              },
-              {
-                title: "Audiostock",
-                description: "BGM・効果音など、商用利用可能な音楽素材を提供しています。",
-                href: "https://audiostock.jp/artists/11994",
-              },
-              {
-                title: "配信作品",
-                description: "各種音楽配信サービスで楽曲を配信しています。",
-                href: "#",
-              },
-            ].map((item) => (
-              <a
-                key={item.title}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group p-6 bg-white rounded-2xl hover:shadow-sm transition-shadow"
-              >
-                <h3 className="font-medium mb-2">{item.title}</h3>
-                <p className="text-sm text-[#6e6e73] leading-relaxed">{item.description}</p>
-                <p className="text-xs text-[#6e6e73] mt-4 group-hover:opacity-70 transition-opacity">
-                  ※リンクを後から設定できます →
-                </p>
-              </a>
-            ))}
+          <div className="grid grid-cols-1 gap-4">
+            <a
+              href="https://audiostock.jp/artists/11994"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between p-6 bg-white rounded-2xl hover:shadow-sm transition-shadow"
+            >
+              <div>
+                <h3 className="font-medium mb-1">Audiostock</h3>
+                <p className="text-sm text-[#6e6e73]">BGM・効果音など、商用利用可能な音楽素材を提供しています。</p>
+              </div>
+              <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
