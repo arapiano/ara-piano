@@ -301,12 +301,28 @@ export default function Home() {
                 YouTube
               </a>
               <a
-                href="https://audiostock.jp/artists/11994"
+                href="https://www.youtube.com/@arapiano"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
               >
-                Audiostock
+                YouTube
+              </a>
+              <a
+                href="https://x.com/aramotokazumasa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
+              >
+                X
+              </a>
+              <a
+                href="https://www.instagram.com/arapiano_arachang/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
+              >
+                Instagram
               </a>
             </div>
           </div>
