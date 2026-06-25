@@ -79,7 +79,7 @@ export default function HomeEn() {
             ARA PIANO
           </h1>
           <p className="text-xl md:text-2xl text-white/70 font-light mb-12">
-            Bringing piano into everyday life.
+            Making piano part of your daily life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -97,7 +97,7 @@ export default function HomeEn() {
               href="#store"
               className="inline-flex items-center justify-center px-8 py-3 border border-white/40 text-white text-sm font-medium rounded-full hover:bg-white/10 transition-colors"
             >
-              Sheet Music
+              View Store
             </a>
           </div>
         </div>
@@ -108,31 +108,68 @@ export default function HomeEn() {
         </div>
       </section>
 
+      {/* Brand Message */}
+      <section id="brand" className="py-40 px-6 bg-[#0e0d0c] text-white">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-2xl md:text-3xl font-medium text-center mb-20">
+            Making piano part of your daily life.
+          </p>
+          <div className="space-y-8 text-center">
+            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+              Piano isn&apos;t just for the gifted few.
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+              Learning to play just one favorite song.<br />
+              Spending a few quiet minutes at the keys at home.<br />
+              Bringing a smile to someone&apos;s face with a performance.
+            </p>
+            <p className="text-base md:text-lg leading-loose text-white/90">
+              We believe these small joys make everyday life a little richer.
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+              At ARA PIANO, instead of giving up because it&apos;s difficult,<br />
+              we believe in starting with the joy of being able to play.
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+              Through arrangements and lessons that are easy for beginners to try,<br />
+              we hope to help as many people as possible feel closer to the piano.
+            </p>
+            <p className="text-base md:text-lg leading-loose text-white/90">
+              Rather than aiming for skill alone,<br />
+              we believe the time spent enjoying music itself enriches life.
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+              With that thought in mind, we hold the words<br />
+              &quot;Making piano part of your daily life&quot; at the heart of everything we do.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* About */}
       <section id="about" className="py-32 px-6">
         <div className="max-w-3xl mx-auto">
           <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">About</p>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
-            Composer &amp; Pianist
-          </h2>
-          <div className="space-y-4 text-[#6e6e73] leading-relaxed mb-6">
-            <p className="text-lg font-medium text-[#1d1d1f]">Kazumasa Aramoto</p>
-            <p className="text-sm text-[#6e6e73]">Composer · Piano YouTuber · CEO of ARA PIANO Inc.</p>
-          </div>
+          <p className="text-2xl font-semibold tracking-tight mb-2">
+            Kazumasa Aramoto
+          </p>
+          <p className="text-sm text-[#6e6e73] mb-12">
+            Composer / Piano YouTuber / CEO of ARA PIANO Inc.
+          </p>
           <div className="space-y-5 text-[#6e6e73] leading-relaxed mb-16">
             <p>
-              A composer and piano YouTuber based in Japan, dedicated to the concept of "Life with Piano." As an Audiostock partner creator, he has released over 1,000 original tracks, with music featured in TV programs and video productions. His YouTube channel "ARA PIANO" has grown to over 150,000 subscribers, and his piano arrangement sheet music has sold over 10,000 copies.
+              A composer and piano YouTuber active under the concept &quot;Making piano part of your daily life.&quot; As an Audiostock partner creator, he has released over 1,000 tracks featured in TV programs and films. His YouTube channel &quot;ARA PIANO&quot; has surpassed 150,000 subscribers, and his piano arrangement sheet music has sold over 10,000 copies in total.
             </p>
             <p>
-              In 2025, he received the Audiostock CREATORS AWARD "Best Creator" prize. As CEO of ARA PIANO Inc., he continues to pursue composition, arrangement, and music education — creating an environment where more people can enjoy music in their everyday lives.
+              In 2025, he received the BEST CREATOR Award at the Audiostock Creators Award. As the representative of ARA PIANO Inc., he continues to create an environment where more people can enjoy music through composition, arrangement, and music education.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { number: "150K+", label: "YouTube Subscribers" },
-              { number: "10,000+", label: "Sheet Music Sold" },
-              { number: "Award", label: "Audiostock Best Creator 2025" },
+              { number: "10K+", label: "Sheet Music Sold" },
+              { number: "Award", label: "Audiostock BEST CREATOR Award" },
             ].map((item) => (
               <div key={item.label} className="text-center py-8 border-t border-black/10">
                 <p className="text-3xl font-semibold tracking-tight mb-2">{item.number}</p>
@@ -153,10 +190,11 @@ export default function HomeEn() {
           <div className="mb-12">
             <h3 className="text-lg font-semibold mb-6">Sheet Music</h3>
             <div className="space-y-3">
-              <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-3">International</p>
+              <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-3">Domestic</p>
               {[
-                { name: "mymusic5", href: "https://www.mymusic5.com/ja/ARAPIANO" },
-                { name: "Mapianist", href: "https://www.mapianist.com/profile/1058756/sheet/post" },
+                { name: "Piascore", href: "https://store.piascore.com/publishers/7845" },
+                { name: "kokomu", href: "https://www.kokomu.jp/artist/ARAPIANO" },
+                { name: "mucome", href: "https://mucome.net/profile?id=1931" },
               ].map((item) => (
                 <a
                   key={item.name}
@@ -171,11 +209,10 @@ export default function HomeEn() {
                   </svg>
                 </a>
               ))}
-              <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-3 pt-4">Japan</p>
+              <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-3 pt-4">International</p>
               {[
-                { name: "Piascore", href: "https://store.piascore.com/publishers/7845" },
-                { name: "kokomu", href: "https://www.kokomu.jp/artist/ARAPIANO" },
-                { name: "mucome", href: "https://mucome.net/profile?id=1931" },
+                { name: "mymusic5", href: "https://www.mymusic5.com/ARAPIANO" },
+                { name: "Mapianist", href: "https://www.mapianist.com/profile/1058756/main" },
               ].map((item) => (
                 <a
                   key={item.name}
@@ -244,16 +281,28 @@ export default function HomeEn() {
             Piano performances, arrangement tutorials, and music for everyday life.
           </p>
 
-          <div className="aspect-video rounded-2xl overflow-hidden mb-8">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/uhwJuXJvOyo"
-              title="ARA PIANO"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+          <a
+            href="https://www.youtube.com/watch?v=uhwJuXJvOyo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative block aspect-video rounded-2xl overflow-hidden mb-8 bg-black group"
+          >
+            <img
+              src="https://img.youtube.com/vi/uhwJuXJvOyo/maxresdefault.jpg"
+              alt="ARA PIANO piano tutorial"
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+              onError={(e) => {
+                const img = e.target as HTMLImageElement;
+                img.onerror = null;
+                img.src = "https://img.youtube.com/vi/uhwJuXJvOyo/hqdefault.jpg";
+              }}
             />
-          </div>
+            <span className="absolute inset-0 flex items-center justify-center">
+              <span className="w-16 h-16 flex items-center justify-center rounded-full bg-black/60 group-hover:bg-red-600/85 transition-colors">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="#ffffff"><path d="M8 5v14l11-7z" /></svg>
+              </span>
+            </span>
+          </a>
 
           <a
             href="https://www.youtube.com/@arapiano"

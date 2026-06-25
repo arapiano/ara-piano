@@ -21,7 +21,6 @@ export default function Home() {
             ARA PIANO
           </a>
 
-          {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
             {NAV_ITEMS.map((item) => (
               <a
@@ -32,10 +31,11 @@ export default function Home() {
                 {item.label}
               </a>
             ))}
-            <a href="/en" className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">EN</a>
+            <a href="/en" className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">
+              EN
+            </a>
           </div>
 
-          {/* Mobile hamburger */}
           <button
             className="md:hidden flex flex-col gap-1.5 p-2"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -47,7 +47,6 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Mobile menu */}
         {menuOpen && (
           <div className="md:hidden bg-white border-t border-black/5 px-6 py-4 flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
@@ -60,6 +59,7 @@ export default function Home() {
                 {item.label}
               </a>
             ))}
+            <a href="/en" className="text-sm text-[#6e6e73]">EN</a>
           </div>
         )}
       </nav>
@@ -108,17 +108,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Brand Message */}
+      <section id="brand" className="py-40 px-6 bg-[#0e0d0c] text-white">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-2xl md:text-3xl font-medium text-center mb-20">
+            ピアノ演奏を日常に。
+          </p>
+          <div className="space-y-8 text-center">
+            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+              ピアノは、一部の特別な人だけのものではありません。
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+              好きな曲を一曲弾けるようになること。<br />
+              家で少しだけ鍵盤に触れること。<br />
+              誰かの前で演奏して笑顔になれること。
+            </p>
+            <p className="text-base md:text-lg leading-loose text-white/90">
+              そんな小さな喜びが、毎日の暮らしを少し豊かにしてくれると信じています。
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+              ARA PIANOでは、「難しいから諦める」のではなく、<br />
+              「弾ける楽しさから始める」ことを大切にしています。
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+              初心者でも挑戦しやすいアレンジやレッスンを通して、<br />
+              一人でも多くの方がピアノを身近に感じられるよう活動しています。
+            </p>
+            <p className="text-base md:text-lg leading-loose text-white/90">
+              演奏の上手さだけを目指すのではなく、<br />
+              音楽を楽しむ時間そのものが、人生の豊かさにつながる。
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+              そんな思いを込めて、<br />
+              「ピアノ演奏を日常に。」という言葉を活動の中心に掲げています。
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* About */}
       <section id="about" className="py-32 px-6">
         <div className="max-w-3xl mx-auto">
           <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">About</p>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">
-            作曲家・ピアニスト
-          </h2>
-          <div className="space-y-4 text-[#6e6e73] leading-relaxed mb-6">
-            <p className="text-lg font-medium text-[#1d1d1f]">新本 和正（Kazumasa Aramoto）</p>
-            <p className="text-sm text-[#6e6e73]">作曲家・ピアノYouTuber・株式会社ARA PIANO代表</p>
-          </div>
+          <p className="text-2xl font-semibold tracking-tight mb-2">
+            新本 和正（Kazumasa Aramoto）
+          </p>
+          <p className="text-sm text-[#6e6e73] mb-12">
+            作曲家・ピアノYouTuber・株式会社ARA PIANO代表
+          </p>
           <div className="space-y-5 text-[#6e6e73] leading-relaxed mb-16">
             <p>
               「ピアノ演奏を日常に」をコンセプトに活動する作曲家・ピアノYouTuber。Audiostock提携クリエイターとして1,000曲以上の楽曲をリリースし、テレビ番組や映像作品などへ楽曲提供を行う。YouTubeチャンネル「ARA PIANO」の登録者数は15万人を超え、ピアノアレンジ楽譜の累計販売数は1万点を超える。
@@ -128,7 +165,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Achievements */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { number: "15万+", label: "YouTube登録者" },
@@ -176,7 +212,7 @@ export default function Home() {
               <p className="text-xs font-medium text-[#6e6e73] uppercase tracking-widest mb-3 pt-4">海外販売</p>
               {[
                 { name: "mymusic5", href: "https://www.mymusic5.com/ja/ARAPIANO" },
-                { name: "Mapianist", href: "https://www.mapianist.com/profile/1058756/sheet/post" },
+                { name: "Mapianist", href: "https://www.mapianist.com/profile/1058756/main" },
               ].map((item) => (
                 <a
                   key={item.name}
@@ -245,16 +281,28 @@ export default function Home() {
             ピアノ演奏動画を中心に、楽曲解説や演奏テクニックなどを発信しています。
           </p>
 
-          <div className="aspect-video rounded-2xl overflow-hidden mb-8">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/uhwJuXJvOyo"
-              title="ARA PIANO"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+          <a
+            href="https://www.youtube.com/watch?v=uhwJuXJvOyo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative block aspect-video rounded-2xl overflow-hidden mb-8 bg-black group"
+          >
+            <img
+              src="https://img.youtube.com/vi/uhwJuXJvOyo/maxresdefault.jpg"
+              alt="久石譲「Summer」初心者でも絶対弾ける！ピアノの弾き方"
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+              onError={(e) => {
+                const img = e.target as HTMLImageElement;
+                img.onerror = null;
+                img.src = "https://img.youtube.com/vi/uhwJuXJvOyo/hqdefault.jpg";
+              }}
             />
-          </div>
+            <span className="absolute inset-0 flex items-center justify-center">
+              <span className="w-16 h-16 flex items-center justify-center rounded-full bg-black/60 group-hover:bg-red-600/85 transition-colors">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="#ffffff"><path d="M8 5v14l11-7z" /></svg>
+              </span>
+            </span>
+          </a>
 
           <a
             href="https://www.youtube.com/@arapiano"
@@ -271,7 +319,7 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-32 px-6">
+      <section id="contact" className="py-32 px-6 bg-[#f5f5f7]">
         <div className="max-w-3xl mx-auto">
           <p className="text-xs tracking-[0.2em] uppercase text-[#6e6e73] mb-4">Contact</p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">お問い合わせ</h2>
@@ -315,34 +363,12 @@ export default function Home() {
             </button>
           </form>
 
-          {/* SNS Links */}
           <div className="border-t border-black/10 pt-12">
             <p className="text-sm text-[#6e6e73] mb-6">SNS</p>
             <div className="flex gap-6">
-              <a
-                href="https://www.youtube.com/@arapiano"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
-              >
-                YouTube
-              </a>
-              <a
-                href="https://x.com/aramotokazumasa"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
-              >
-                X
-              </a>
-              <a
-                href="https://www.instagram.com/arapiano_arachang/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
-              >
-                Instagram
-              </a>
+              <a href="https://www.youtube.com/@arapiano" target="_blank" rel="noopener noreferrer" className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">YouTube</a>
+              <a href="https://x.com/aramotokazumasa" target="_blank" rel="noopener noreferrer" className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">X</a>
+              <a href="https://www.instagram.com/arapiano_arachang/" target="_blank" rel="noopener noreferrer" className="text-sm text-[#6e6e73] hover:text-[#1d1d1f] transition-colors">Instagram</a>
             </div>
           </div>
         </div>
