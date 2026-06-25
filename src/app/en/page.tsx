@@ -118,27 +118,66 @@ export default function HomeEn() {
             <p className="text-base md:text-lg leading-loose font-light text-white/60">
               Piano isn&apos;t just for the gifted few.
             </p>
-            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 md:hidden">
+              Learning to play<br />
+              just one favorite song.<br />
+              Spending a few quiet minutes<br />
+              at the keys at home.<br />
+              Bringing a smile to someone&apos;s face<br />
+              with a performance.
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 hidden md:block">
               Learning to play just one favorite song.<br />
               Spending a few quiet minutes at the keys at home.<br />
               Bringing a smile to someone&apos;s face with a performance.
             </p>
+
             <p className="text-base md:text-lg leading-loose text-white/90">
               We believe these small joys make everyday life a little richer.
             </p>
-            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 md:hidden">
+              At ARA PIANO,<br />
+              instead of giving up<br />
+              because it&apos;s difficult,<br />
+              we believe in starting with<br />
+              the joy of being able to play.
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 hidden md:block">
               At ARA PIANO, instead of giving up because it&apos;s difficult,<br />
               we believe in starting with the joy of being able to play.
             </p>
-            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 md:hidden">
+              Through arrangements and lessons<br />
+              that are easy for beginners to try,<br />
+              we hope to help as many people<br />
+              as possible feel closer to the piano.
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 hidden md:block">
               Through arrangements and lessons that are easy for beginners to try,<br />
               we hope to help as many people as possible feel closer to the piano.
             </p>
-            <p className="text-base md:text-lg leading-loose text-white/90">
+
+            <p className="text-base md:text-lg leading-loose text-white/90 md:hidden">
+              Rather than aiming<br />
+              for skill alone,<br />
+              we believe the time spent<br />
+              enjoying music itself enriches life.
+            </p>
+            <p className="text-base md:text-lg leading-loose text-white/90 hidden md:block">
               Rather than aiming for skill alone,<br />
               we believe the time spent enjoying music itself enriches life.
             </p>
-            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 md:hidden">
+              With that thought in mind,<br />
+              we hold the words<br />
+              &quot;Making piano part of your daily life&quot;<br />
+              at the heart of everything we do.
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 hidden md:block">
               With that thought in mind, we hold the words<br />
               &quot;Making piano part of your daily life&quot; at the heart of everything we do.
             </p>

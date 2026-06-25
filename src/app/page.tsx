@@ -115,30 +115,76 @@ export default function Home() {
             ピアノ演奏を日常に。
           </p>
           <div className="space-y-8 text-center">
-            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 md:hidden">
+              ピアノは、一部の特別な人だけの<br />
+              ものではありません。
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 hidden md:block">
               ピアノは、一部の特別な人だけのものではありません。
             </p>
-            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 md:hidden">
+              好きな曲を一曲<br />
+              弾けるようになること。<br />
+              家で少しだけ<br />
+              鍵盤に触れること。<br />
+              誰かの前で演奏して<br />
+              笑顔になれること。
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 hidden md:block">
               好きな曲を一曲弾けるようになること。<br />
               家で少しだけ鍵盤に触れること。<br />
               誰かの前で演奏して笑顔になれること。
             </p>
-            <p className="text-base md:text-lg leading-loose text-white/90">
+
+            <p className="text-base md:text-lg leading-loose text-white/90 md:hidden">
+              そんな小さな喜びが、毎日の暮らしを<br />
+              少し豊かにしてくれると信じています。
+            </p>
+            <p className="text-base md:text-lg leading-loose text-white/90 hidden md:block">
               そんな小さな喜びが、毎日の暮らしを少し豊かにしてくれると信じています。
             </p>
-            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 md:hidden">
+              ARA PIANOでは、<br />
+              「難しいから諦める」のではなく、<br />
+              「弾ける楽しさから始める」<br />
+              ことを大切にしています。
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 hidden md:block">
               ARA PIANOでは、「難しいから諦める」のではなく、<br />
               「弾ける楽しさから始める」ことを大切にしています。
             </p>
-            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 md:hidden">
+              初心者でも挑戦しやすい<br />
+              アレンジやレッスンを通して、<br />
+              一人でも多くの方が<br />
+              ピアノを身近に感じられるよう<br />
+              活動しています。
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 hidden md:block">
               初心者でも挑戦しやすいアレンジやレッスンを通して、<br />
               一人でも多くの方がピアノを身近に感じられるよう活動しています。
             </p>
-            <p className="text-base md:text-lg leading-loose text-white/90">
+
+            <p className="text-base md:text-lg leading-loose text-white/90 md:hidden">
+              演奏の上手さだけを<br />
+              目指すのではなく、<br />
+              音楽を楽しむ時間そのものが、<br />
+              人生の豊かさにつながる。
+            </p>
+            <p className="text-base md:text-lg leading-loose text-white/90 hidden md:block">
               演奏の上手さだけを目指すのではなく、<br />
               音楽を楽しむ時間そのものが、人生の豊かさにつながる。
             </p>
-            <p className="text-base md:text-lg leading-loose font-light text-white/60">
+
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 md:hidden">
+              そんな思いを込めて、<br />
+              「ピアノ演奏を日常に。」<br />
+              という言葉を活動の中心に掲げています。
+            </p>
+            <p className="text-base md:text-lg leading-loose font-light text-white/60 hidden md:block">
               そんな思いを込めて、<br />
               「ピアノ演奏を日常に。」という言葉を活動の中心に掲げています。
             </p>
