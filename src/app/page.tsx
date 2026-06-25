@@ -296,7 +296,7 @@ export default function Home() {
           </div>
 
           {/* BGM */}
-          <div>
+          <div className="mb-12">
             <h3 className="text-lg font-semibold mb-6">BGM</h3>
             <a
               href="https://audiostock.jp/artists/11994"
@@ -312,6 +312,30 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
               </svg>
             </a>
+          </div>
+
+          {/* Music Streaming */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">音楽配信</h3>
+            <div className="space-y-3">
+              {[
+                { name: "Apple Music", href: "https://music.apple.com/jp/artist/arachang/1171190566" },
+                { name: "Spotify", href: "https://open.spotify.com/artist/3QZmndnYJYWHYqJgUiNqkO" },
+              ].map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between p-5 bg-white rounded-2xl hover:shadow-sm transition-shadow"
+                >
+                  <p className="font-medium">{item.name}</p>
+                  <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
