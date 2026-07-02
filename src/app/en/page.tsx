@@ -272,20 +272,36 @@ export default function HomeEn() {
           {/* Goods */}
           <div className="mb-12">
             <h3 className="text-lg font-semibold mb-6">Goods</h3>
-            <a
-              href="https://suzuri.jp/ARAPIANO"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between p-5 bg-white rounded-2xl hover:shadow-sm transition-shadow"
-            >
-              <div>
-                <p className="font-medium">SUZURI</p>
-                <p className="text-sm text-[#6e6e73] mt-1">Official ARA PIANO merchandise.</p>
-              </div>
-              <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
+            <div className="space-y-3">
+              <a
+                href="https://store.line.me/stickershop/author/6345996/ja"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between p-5 bg-white rounded-2xl hover:shadow-sm transition-shadow"
+              >
+                <div>
+                  <p className="font-medium">LINE Stickers</p>
+                  <p className="text-sm text-[#6e6e73] mt-1">Official ARA PIANO LINE stickers.</p>
+                </div>
+                <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                href="https://suzuri.jp/ARAPIANO"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between p-5 bg-white rounded-2xl hover:shadow-sm transition-shadow"
+              >
+                <div>
+                  <p className="font-medium">SUZURI</p>
+                  <p className="text-sm text-[#6e6e73] mt-1">Official ARA PIANO merchandise.</p>
+                </div>
+                <svg className="w-4 h-4 text-[#6e6e73] group-hover:translate-x-1 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           {/* BGM */}
