@@ -42,13 +42,13 @@ const text = {
     philosophyLead: <>音楽を、限られた人だけのものにしない。<br />学びたい人が、自分のペースで音楽を楽しめる場所をつくる。</>,
     philosophyBody: "難しさを理由に諦めるのではなく、弾ける喜びから始める。作曲、演奏、映像、教育を通して、音楽と人との距離を近づけること。それがARA PIANOの目指す「音楽の民主化」です。",
     role: "作曲家・ピアノYouTuber・株式会社ARA PIANO代表",
-    bio1: "「ピアノ演奏を日常に」をコンセプトに活動。Audiostock提携クリエイターとして1,000曲以上の楽曲をリリースし、テレビ番組や映像作品へ楽曲を提供しています。",
-    bio2: "YouTubeチャンネル登録者数は16万人を超え、ピアノアレンジ楽譜の累計販売数は1万点以上。2025年、Audiostock CREATORS AWARD「BEST CREATOR賞」を受賞しました。",
+    bio1: "「ピアノ演奏を日常に」をコンセプトに活動している。Audiostock提携クリエイターとして1,000曲以上の楽曲をリリースし、テレビ番組や映像作品へ楽曲を提供している。",
+    bio2: "YouTubeチャンネル登録者数は16万人を超え、ピアノアレンジ楽譜の累計販売数は1万点以上。2025年には、Audiostock CREATORS AWARD「BEST CREATOR賞」を受賞している。",
     awardsLabel: "受賞歴・掲載実績",
     araTitle: "アラちゃん",
     araBody: "ARA PIANOの公式キャラクター。音楽のある日常を、やわらかく、親しみやすく伝えるクリエイティブパートナーです。LINEスタンプやオリジナルグッズに登場しています。",
     araLink: "アラちゃんのLINEスタンプを見る",
-    contactIntro: "楽曲制作、映像、教育、その他のお問い合わせはこちらから。",
+    contactIntro: "お仕事に関するお問い合わせはこちら。",
     name: "お名前", email: "メールアドレス", message: "お問い合わせ内容", send: "送信する", sending: "送信中…", sent: "お問い合わせを送信しました。", sendError: "送信できませんでした。時間をおいてもう一度お試しください。",
   },
   en: {
@@ -67,7 +67,7 @@ const text = {
     araTitle: "Ara-chan",
     araBody: "ARA PIANO's official character and creative companion, bringing a softer, more approachable expression to a life with music through LINE stickers and original goods.",
     araLink: "View Ara-chan LINE stickers",
-    contactIntro: "For inquiries about music production, film, education, and other projects, please contact us here.",
+    contactIntro: "For work inquiries, please contact us here.",
     name: "Name", email: "Email", message: "Message", send: "Send message", sending: "Sending…", sent: "Thank you. Your message has been sent.", sendError: "Your message could not be sent. Please try again later.",
   },
 };
@@ -78,7 +78,7 @@ function ExternalArrow() {
 
 function StoreGroup({ title, items, locale }: { title: string; items: string[][]; locale: Locale }) {
   return (
-    <div className="store-group reveal">
+    <div className="store-group">
       <h3>{title}</h3>
       <div className="store-links">
         {items.map(([name, href, note]) => (
