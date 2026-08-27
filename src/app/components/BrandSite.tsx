@@ -138,8 +138,8 @@ export default function BrandSite({ locale }: { locale: Locale }) {
           <p>Life with Piano.</p>
           <Image className="signature" src="/kazumasa-aramoto-signature.png" alt="Kazumasa Aramoto" width={292} height={43} priority />
           <div className="hero-actions">
-            <a href="https://www.youtube.com/@arapiano" target="_blank" rel="noopener noreferrer">{t.heroYoutube}<ExternalArrow /></a>
-            <a href="#store">{t.heroStore}<span aria-hidden="true">↓</span></a>
+            <a href="https://www.youtube.com/@arapiano" target="_blank" rel="noopener noreferrer">{t.heroYoutube}</a>
+            <a href="#store">{t.heroStore}</a>
           </div>
         </div>
         <a className="scroll-hint" href="#store"><span>Scroll</span><i /></a>
