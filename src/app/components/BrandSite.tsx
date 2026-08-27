@@ -46,7 +46,7 @@ const text = {
     bio2: "YouTubeチャンネル登録者数は16万人を超え、ピアノアレンジ楽譜の累計販売数は1万点以上。2025年には、Audiostock CREATORS AWARD「BEST CREATOR賞」を受賞している。",
     awardsLabel: "受賞歴・掲載実績",
     araTitle: "アラちゃん",
-    araBody: "ARA PIANOの公式キャラクター。音楽のある日常を、やわらかく、親しみやすく伝えるクリエイティブパートナーです。LINEスタンプやオリジナルグッズに登場しています。",
+    araBody: "ARA PIANOの公式キャラクター。音楽のある日常を、やわらかく、親しみやすく伝えるクリエイティブパートナーとして、LINEスタンプやオリジナルグッズに登場している。",
     araLink: "アラちゃんのLINEスタンプを見る",
     contactIntro: "お仕事に関するお問い合わせはこちら。",
     name: "お名前", email: "メールアドレス", message: "お問い合わせ内容", send: "送信する", sending: "送信中…", sent: "お問い合わせを送信しました。", sendError: "送信できませんでした。時間をおいてもう一度お試しください。",
@@ -206,7 +206,7 @@ export default function BrandSite({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <footer className="footer"><a className="brand" href="#top">ARA PIANO</a><p>Life with Piano.</p><nav aria-label="Social links"><a href="https://www.youtube.com/@arapiano" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://x.com/aramotokazumasa" target="_blank" rel="noopener noreferrer">X ↗</a><a href="https://www.instagram.com/arapiano_arachang/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></nav><small>© {new Date().getFullYear()} ARA PIANO</small></footer>
+      <footer className="footer"><a className="brand" href="#top">ARA PIANO</a><p>Life with Piano.</p><nav aria-label="Social links"><a href="https://www.youtube.com/@arapiano" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://x.com/aramotokazumasa" target="_blank" rel="noopener noreferrer">X ↗</a><a href="https://www.instagram.com/arapiano_arachang/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://note.com/ara_piano" target="_blank" rel="noopener noreferrer">note ↗</a></nav><small>© {new Date().getFullYear()} ARA PIANO</small></footer>
     </main>
   );
 }
