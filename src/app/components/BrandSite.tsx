@@ -24,7 +24,7 @@ const stores = {
 };
 
 const awards = [
-  { year: "2016", title: "The International Indie Gathering", ja: "Film Scoring Competition — Winner", en: "Film Scoring Competition — Winner", href: "https://theindiegathering.com/" },
+  { year: "2016", title: "The International Indie Gathering", ja: "Film Scoring Competition — Winner", en: "Film Scoring Competition — Winner", href: null },
   { year: "2021", title: "Audiostock CREATORS AWARD 2021", ja: "エリア別部門（関東）受賞", en: "Regional Award (Kanto)", href: "https://audiostock.jp/special/creators_award_2021" },
   { year: "2022", title: "Audiostock CREATORS AWARD 2022", ja: "年間総合 SILVER CREATOR受賞", en: "Annual SILVER CREATOR Award", href: "https://audiostock.jp/special/creators_award_2022" },
   { year: "2023", title: "Forbes JAPAN 2023年5月号", ja: "「新しい稼ぎ方を作る 日本で今注目のクリエイター図鑑」掲載", en: "Featured in “Creators to Watch in Japan”", href: "https://forbesjapan.com/magazine/detail/156" },
@@ -185,7 +185,12 @@ export default function BrandSite({ locale }: { locale: Locale }) {
           <details className="awards reveal">
             <summary><span><small>Awards &amp; Press</small>{t.awardsLabel}</span><i aria-hidden="true">＋</i></summary>
             <div className="awards-list">
-              {awards.map((award) => <a href={award.href} target="_blank" rel="noopener noreferrer" key={award.year}><time>{award.year}</time><span><strong>{award.title}</strong><small>{locale === "ja" ? award.ja : award.en}</small></span><ExternalArrow /></a>)}
+              {awards.map((award) => {
+                const content = <><time>{award.year}</time><span><strong>{award.title}</strong><small>{locale === "ja" ? award.ja : award.en}</small></span></>;
+                return award.href
+                  ? <a className="award-row" href={award.href} target="_blank" rel="noopener noreferrer" key={award.year}>{content}<ExternalArrow /></a>
+                  : <div className="award-row no-link" key={award.year}>{content}<span aria-hidden="true" /></div>;
+              })}
             </div>
           </details>
           <div className="character-block reveal"><div><p className="sub-label">Official character</p><h3>{t.araTitle}</h3><Image className="character-image" src="/ara-chan.png" alt={t.araTitle} width={240} height={240} /></div><div><p>{t.araBody}</p><a href="https://store.line.me/stickershop/author/6345996/ja" target="_blank" rel="noopener noreferrer">{t.araLink}<ExternalArrow /></a></div></div>
