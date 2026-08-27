@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ARA PIANO | Life with Piano",
-  description: "ピアノ演奏を日常に。作曲家・ピアニスト ARA PIANO の公式サイト。楽譜販売、YouTube、オリジナル音楽作品。",
-  keywords: ["ARA PIANO", "ピアノ", "楽譜", "作曲家", "ピアニスト", "YouTube"],
+  title: "ARA PIANO | Life with Piano.",
+  description: "音楽を、もっと身近に。作曲・演奏・映像・教育を横断するクリエイティブブランド、ARA PIANO。",
+  keywords: ["ARA PIANO", "新本和正", "Kazumasa Aramoto", "作曲", "ピアノ", "楽譜", "音楽教育"],
   openGraph: {
-    title: "ARA PIANO | Life with Piano",
-    description: "ピアノ演奏を日常に。作曲家・ピアニスト ARA PIANO の公式サイト。",
+    title: "ARA PIANO | Life with Piano.",
+    description: "作曲・演奏・映像・教育を横断するクリエイティブブランド。",
     type: "website",
   },
 };
