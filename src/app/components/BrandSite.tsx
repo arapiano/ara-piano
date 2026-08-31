@@ -13,6 +13,7 @@ const stores = {
     ["mucome", "https://mucome.net/profile?id=1931", "Japan"],
     ["mymusic5", "https://www.mymusic5.com/ja/ARAPIANO", "Worldwide"],
     ["Mapianist", "https://www.mapianist.com/profile/1058756/main", "Worldwide"],
+    ["ミュージック・ベルズ", "https://music-bells.com/?mode=srh&sort=n&cid=&keyword=%BF%B7%CB%DC%CF%C2%C0%B5", "Original compositions"],
   ],
   goods: [["SUZURI", "https://suzuri.jp/ARAPIANO", "Official goods"]],
   character: [["LINE Stickers", "https://store.line.me/stickershop/author/6345996/ja", "Ara-chan"]],
