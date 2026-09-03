@@ -82,12 +82,19 @@ function StoreGroup({ title, items, locale }: { title: string; items: string[][]
     <div className="store-group">
       <h3>{title}</h3>
       <div className="store-links">
-        {items.map(([name, href, note]) => (
-          <a href={locale === "en" && name === "mymusic5" ? "https://www.mymusic5.com/ARAPIANO" : href} target="_blank" rel="noopener noreferrer" key={name}>
-            <span><strong>{locale === "en" && name === "ミュージック・ベルズ" ? "Music Bells" : name}</strong><small>{note}</small></span>
-            <span className="external-label">External <ExternalArrow /></span>
-          </a>
-        ))}
+        {items.map(([name, href, note]) => {
+          const localizedHref = locale === "en" && name === "mymusic5"
+            ? "https://www.mymusic5.com/ARAPIANO"
+            : locale === "en" && name === "Audiostock"
+              ? "https://audiostock.net/artists/933"
+              : href;
+          return (
+            <a href={localizedHref} target="_blank" rel="noopener noreferrer" key={name}>
+              <span><strong>{locale === "en" && name === "ミュージック・ベルズ" ? "Music Bells" : name}</strong><small>{note}</small></span>
+              <span className="external-label">External <ExternalArrow /></span>
+            </a>
+          );
+        })}
       </div>
     </div>
   );
