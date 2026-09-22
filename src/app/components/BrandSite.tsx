@@ -44,7 +44,7 @@ const text = {
     philosophyBody: "難しさを理由に諦めるのではなく、弾ける喜びから始める。作曲、演奏、映像、教育を通して、音楽と人との距離を近づける。それが、ARA PIANOの目指す「音楽の民主化」である。",
     role: "作曲家・ピアノYouTuber・株式会社ARA PIANO代表",
     bio1: "「ピアノ演奏を日常に」をコンセプトに活動する作曲家。Audiostock提携クリエイターとして1,000曲以上をリリースし、その楽曲はテレビ番組や映像作品、YouTube動画などで幅広く使用されている。",
-    bio2: "YouTubeチャンネル登録者数は16万人を超え、ピアノアレンジ楽譜の累計販売数は2万点以上。2025年には、Audiostock CREATORS AWARD「BEST CREATOR賞」を受賞。",
+    bio2: "YouTubeチャンネル登録者数は17万人を超え、ピアノアレンジ楽譜の累計販売数は2万点以上。2025年には、Audiostock CREATORS AWARD「BEST CREATOR賞」を受賞。",
     awardsLabel: "受賞歴・掲載実績",
     araTitle: "アラちゃん",
     araBody: "ARA PIANOの公式キャラクター。音楽のある日常を、やわらかく、親しみやすく伝えるクリエイティブパートナーとして、LINEスタンプやオリジナルグッズに登場している。",
@@ -63,7 +63,7 @@ const text = {
     philosophyBody: "Rather than giving up because music feels difficult, begin with the joy of being able to play. Through composition, performance, film, and education, ARA PIANO brings music closer to more people.",
     role: "Composer / Piano YouTuber / CEO of ARA PIANO Inc.",
     bio1: "Working under the idea of making piano part of daily life, Kazumasa Aramoto has released over 1,000 tracks as an Audiostock partner creator, with music featured in television and film.",
-    bio2: "The ARA PIANO YouTube channel has more than 160,000 subscribers and over 20,000 sheet music sales. In 2025, he received Audiostock's BEST CREATOR Award.",
+    bio2: "The ARA PIANO YouTube channel has more than 170,000 subscribers and over 20,000 sheet music sales. In 2025, he received Audiostock's BEST CREATOR Award.",
     awardsLabel: "Awards & Press",
     araTitle: "Ara-chan",
     araBody: "ARA PIANO's official character and creative companion, bringing a softer, more approachable expression to a life with music through LINE stickers and original goods.",
@@ -189,7 +189,7 @@ export default function BrandSite({ locale }: { locale: Locale }) {
             <div><p className="sub-label">Artist</p><h2>Kazumasa<br />Aramoto</h2><p className="role">{t.role}</p></div>
             <div className="profile-copy"><p>{t.bio1}</p><p>{t.bio2}</p></div>
           </div>
-          <div className="facts reveal"><div><strong>1,000+</strong><span>Original works</span></div><div><strong>160K+</strong><span>YouTube community</span></div><div><strong>20K+</strong><span>Scores delivered</span></div><div><strong>2025</strong><span>Best Creator Award</span></div></div>
+          <div className="facts reveal"><div><strong>1,000+</strong><span>Original works</span></div><div><strong>170K+</strong><span>YouTube community</span></div><div><strong>20K+</strong><span>Scores delivered</span></div><div><strong>2025</strong><span>Best Creator Award</span></div></div>
           <details className="awards reveal">
             <summary><span><small>Awards &amp; Press</small>{t.awardsLabel}</span><i aria-hidden="true">＋</i></summary>
             <div className="awards-list">
